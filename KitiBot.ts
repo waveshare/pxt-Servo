@@ -124,17 +124,21 @@ namespace KitiBot {
 	 * Servo Execute
 	 * @param degree [0-180] degree of servo; eg: 0, 90, 180
 	*/
-    //% blockId=kitibot_servo block="Servo degree %degree"
+    //% blockId=kitibot_servo block="Servo channel|%channel|degree %degree"
+	//% channel eg: 0
+    //% degree eg：90
     //% weight=85
     //% degree.min=0 degree.max=180
-    export function Servo(degree: number): void {
+    export function Servo(channel: number,degree: number): void {
+		if (channel < 0 || channel > 15)
+            return;
 		if (!initialized) {
             initPCA9685()
         }
 		// 50hz: 20,000 us
         let v_us = (degree * 1800 / 180 + 600) // 0.6 ~ 2.4
         let value = v_us * 4096 / 20000
-        setPwm(0, 0, value)
+        setPwm(channel, 0, value)
     }
 
     //% blockId=kitibot_motor_run block="Motor|%index|speed %speed"
