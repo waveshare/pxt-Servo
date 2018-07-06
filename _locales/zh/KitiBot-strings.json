@@ -1,0 +1,18 @@
+{
+	"Dir.forward|block": "前进",
+	"Dir.backward|block": "后退",
+	"Dir.turnRight|block": "右转",
+	"Dir.turnLeft|block": "左转",
+	"Dir.stop|block": "停止",
+	"KitiBot.Servo|block": "设置舵机角度 %degree",
+	"KitiBot.MotorRun|block": "电机|%index|速度 %speed",
+	"KitiBot.Run|block": "%index|速度 %speed",
+	"KitiBot.RunDelay|block": "%index|速度 %speed|持续%time|秒",
+	"KitiBot.Ultrasonic|block": "超声波",
+	"KitiBot.SensorCalibrated|block": "循迹传感器校准",
+	"KitiBot.readLine|block": "获取线位置",
+	"KitiBot.AnalogRead|block": "循迹数值",
+	"KitiBot.readCalibrated|block": "循迹校准数值",
+	"KitiBot.ReadSensorMax|block": "循迹最大值",
+	"KitiBot.ReadSensorMin|block": "循迹最小值"
+}
