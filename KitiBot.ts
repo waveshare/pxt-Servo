@@ -4,6 +4,24 @@
  * 想了解更详细的信息，请前往 https://makecode.microbit.org/blocks/custom
  */
 
+enum Servos {
+	S0 = 0x00,
+	S1 = 0x01,
+	S2 = 0x02,
+	S3 = 0x03,
+	S4 = 0x04,
+	S5 = 0x05,
+	S6 = 0x06,
+	S7 = 0x07,
+	S8 = 0x08,
+	S9 = 0x09,	
+	S10 = 0x0A,
+	S11 = 0x0B,
+	S12 = 0x0C,
+	S13 = 0x0D,
+	S14 = 0x0E,
+	S15 = 0x0F,
+}
 
 /**
  * 自定义图形块
