@@ -20,7 +20,7 @@ export enum Servos {
 	S12 = 0x0C,
 	S13 = 0x0D,
 	S14 = 0x0E,
-	S15 = 0x0F
+	S15 = 0x0F,
 }
 
 /**
