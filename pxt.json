@@ -1,7 +1,7 @@
 {
-    "name": "KitiBot",
+    "name": "Servo",
     "version": "0.0.0",
-    "description": "Extension for waveshare KitiBot",
+    "description": "Extension for waveshare PCA8965 Servo Driver",
     "license": "MIT",
     "dependencies": {
         "core": "*"
@@ -9,7 +9,7 @@
     "files": [
         "README.md",
         "Servo.ts",
-        "_locales/zh/KitiBot-strings.json"
+        "_locales/zh/Servo-strings.json"
     ],
     "testFiles": [
         "test.ts"
