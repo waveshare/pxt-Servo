@@ -1,6 +1,6 @@
 # Servo
 
-Extension for Waveshare KitiBot
+Extension for PCA9685 Servo control ,Use with Micro:bit
 
 ## License
 
@@ -12,5 +12,5 @@ MIT
 (The metadata above is needed for package search.)
 
 ```package
-KitiBot=github.com/waveshare/pxt-Servo
+Servo=github.com/waveshare/pxt-Servo
 ```
