@@ -114,8 +114,8 @@ namespace Servo {
 	 * Servo Execute
 	 * @param degree [0-180] degree of servo; eg: 0, 90, 180
 	*/
-    //% blockId=kitibot_servo block="Servo channel|%channel|degree %degree"
-    //% degree eg：90
+    //% blockId=setServo block="Servo channel|%channel|degree %degree"
+    //% degree eg: 90
     //% weight=85
     //% degree.min=0 degree.max=180
     export function Servo(channel: Servos,degree: number): void {
