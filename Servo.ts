@@ -4,25 +4,6 @@
  * 想了解更详细的信息，请前往 https://makecode.microbit.org/blocks/custom
  */
 
-enum Servos {
-	S0 = 0x00,
-	S1 = 0x01,
-	S2 = 0x02,
-	S3 = 0x03,
-	S4 = 0x04,
-	S5 = 0x05,
-	S6 = 0x06,
-	S7 = 0x07,
-	S8 = 0x08,
-	S9 = 0x09,	
-	S10 = 0x0A,
-	S11 = 0x0B,
-	S12 = 0x0C,
-	S13 = 0x0D,
-	S14 = 0x0E,
-	S15 = 0x0F,
-}
-
 /**
  * 自定义图形块
  */
@@ -112,21 +93,34 @@ namespace Servo {
 
 	/**
 	 * Servo Execute
-	 * @param degree [0-180] degree of servo; eg: 0, 90, 180
+	 * @param degree [0-180] degree of servo; eg: 90, 0, 180
 	*/
     //% blockId=setServo block="Servo channel|%channel|degree %degree"
-    //% degree eg: 90
     //% weight=85
     //% degree.min=0 degree.max=180
-    export function Servo(channel: Servos,degree: number): void {
-		if (channel < 0 || channel > 15)
-            return;
+    export function Servo(channel: number,degree: number): void {
 		if (!initialized) {
             initPCA9685();
         }
 		// 50hz: 20,000 us
         let v_us = (degree * 1800 / 180 + 600); // 0.6 ~ 2.4
         let value = v_us * 4096 / 20000;
+        setPwm(channel, 0, value);
+    }
+	
+	/**
+	 * Servo Execute
+	 * @param pulse [500-2500] pulse of servo; eg: 1500, 500, 2500
+	*/
+    //% blockId=setServoPulse block="Servo channel|%channel|pulse %pulse"
+    //% weight=85
+    //% pulse.min=500 pulse.max=2500
+    export function ServoPulse(channel: number,pulse: number): void {
+		if (!initialized) {
+            initPCA9685();
+        }
+		// 50hz: 20,000 us
+        let value = pulse * 4096 / 20000;
         setPwm(channel, 0, value);
     }
 } 

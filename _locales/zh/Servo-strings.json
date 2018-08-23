@@ -1,3 +1,4 @@
 {
-	"Servo.Servo|block": "设置舵机 %channel|角度 %degree"
+	"Servo.Servo|block": "设置舵机 %channel|角度 %degree",
+	"Servo.ServoPulse|block": "设置舵机 %channel|脉宽 %pulse"
 }
